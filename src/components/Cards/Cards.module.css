@@ -1,0 +1,16 @@
+.divCards {
+    display: flex;
+    justify-content:space-around;
+
+
+    
+}
+
+.img {
+    /* position: absolute;
+    right: 0px;
+    width: 20%;
+    border-bottom: 40px solid white;
+    border-top: 30px solid white;
+    border-radius: 4px; */
+}

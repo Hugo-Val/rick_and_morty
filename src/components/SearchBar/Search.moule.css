@@ -1,0 +1,10 @@
+.inputsearch {
+    display: flex;
+}
+
+.buttonsearch {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}

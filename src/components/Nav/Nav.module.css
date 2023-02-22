@@ -1,0 +1,27 @@
+.divNav {
+    display: flex;
+    background-color: aquamarine;
+    width:98.7%;
+    height: 30px;
+    padding: 8px;
+    background-clip: content-box;
+}
+
+.divSearch {
+    display: flex;
+    
+    
+    
+    
+    
+     
+}
+
+.linkHome {
+    display:block;
+    background-color: burlywood;
+    text-decoration-line: none;
+    height: 20px;
+    
+
+}
