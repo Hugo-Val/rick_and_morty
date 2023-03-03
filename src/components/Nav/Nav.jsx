@@ -1,25 +1,34 @@
 import SearchBar from "../SearchBar/SearchBar";
-import imgLetter from "../../images/letter.png";
+
 import styles from "../Nav/Nav.module.css";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Nav(props){
     const navigate = useNavigate();
     const {onSearch} = props;
-    const handleClick = () => {
-        navigate('/');
-    }
+    // const handleClick = () => {
+    //     navigate('/');
+    // }
     return (
         <div className={styles.divNav}>
             {/* <div onClick={handleClick}>
                 <img src={imgLetter} alt="Rick and Morty" />    
             </div> */}
             <div className={styles.divSearch}>
-                <Link to='/' className={styles.linkHome}>Home</Link> 
+                <Link 
+                    to='/Home'
+                    className={styles.linkHome}
+                >Home</Link> 
                 <br />
-                <Link to="/about">About</Link>
+                <Link 
+                    to="/favorites"
+                    className={styles.linkFavorites}
+                >Favorites</Link>
                 <br />
-                <Link to="/favorites">Favorites</Link>
+                <Link 
+                    to="/about"
+                    className={styles.linkAbout}
+                >About</Link>
                 <SearchBar onSearch={onSearch}/>
             </div>
         </div>

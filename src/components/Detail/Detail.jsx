@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
 
 export default function Detail() {
     const {detailId} = useParams();
@@ -22,27 +23,33 @@ export default function Detail() {
         return setCharacter({});
     },[detailId])
 
-    const handleClick = () => {
-        navigate('/');
-    }
+    
 
     return (
         <>
-            <div>
-                <button onClick={handleClick}>Back to Home</button>
-            </div>
+            
             {
                 character ? (
                     <div>
+                        <div className={styles.div}>
+                            <h1 className={styles.h1}>Nombre : {character.name}</h1>
                         <div>
-                            <h1>{character.name}</h1>
-                            <h3>Status : {character.status}</h3>
-                            <h3>Species : {character.species}</h3>
-                            <h3>Gender : {character.gender}</h3>
-                            <h3>Origin : {character.origin?.name}</h3>
+                            <img 
+                                src={character.image}
+                                alt={character.name}
+                                className={styles.img}
+                            />
                         </div>
-                        <div>
-                            <img src={character.image} alt={character.name} />
+                            
+                            <h3 className={styles.h3}>Origin : {character.origin?.name}</h3>
+                            
+                            <h3 className={styles.h3}>Gender : {character.gender}</h3>
+                            
+                            <h3 className={styles.h3}>Species : {character.species}</h3>
+                            
+                            <h3 className={styles.h3}>Status : {character.status}</h3>
+                            
+
                         </div>
                     </div>
                 ) : ("")

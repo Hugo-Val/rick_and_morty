@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./Search.moule.css";
+import styles from "./Search.module.css";
    
 
 export default function SearchBar({onSearch}) {
@@ -10,8 +10,9 @@ export default function SearchBar({onSearch}) {
 
    return (
       <>
-         <div>
+         <div className={styles.divSearch}>
             <input 
+               className={styles.inputsearch}
                type='search'
                placeholder="  Search character"
                onChange={handleChange}

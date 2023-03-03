@@ -1,6 +1,10 @@
 .divCard {
-    display: flex;
-    flex-direction: row;
+    background-color:blueviolet;
+    padding-top: 0%;
+    
+    
+
+    
     
     
     
@@ -8,53 +12,66 @@
 }
 
 .img {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 350px;
-    border-bottom: 40px solid white;
-    border-top: 30px solid white;
-    border-radius: 4px;
+    padding: 0px;
+    
+}
+.divbuttons {
+    background-color: blueviolet;
+    height: 40px;
+}
+.buttonFav {
+    position: relative;
+    top: 8px;
+    left: 6px;
+    background-color: rgb(106, 0, 255);
+    border-radius: 5px;
+}
+.button {
+    position: relative;
+    left: 235px;
+    top:8px;
+    background-color: rgb(106, 0, 255);
+    color: aliceblue;
+    border-radius: 5px;
+    
+
+    
     
 }
 
-.button {
-    position:absolute;
-    top: 5px; 
-    left: 58.5%;
-    background-color: cadetblue;
-    color: white;
-    border-radius: 4px;
-    height: 20px;
-}
-
 .button:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    padding: 0;
 }
 
 .button:active {
-    background-color: cadetblue;
-    box-shadow: 0 5px #666;
-    transform: translateY(2px);
+    padding: 0;
 }
 
 .h2name {
-    position: absolute;
-    top: 38%;
-    right: 41%;
-    color:darkviolet;
+    position: relative;
+    top:250px;
+    left: 15px;
+    color: rgb(0, 0, 0);
+    background-color: beige;
+    width: fit-content;
+    
 }
-
+.divH2 {
+    background-color: blueviolet;
+}
 .h2species {
-    position: absolute;
-    top: 44%;
-    right: 52%;
-    color:rgba(68, 150, 109, 0.185);
+    position: relative;
+    left: 150px;
+    top: 16px;
+    
 }
 
 .h2gender {
-    position: absolute;
-    top: 44%;
-    right: 43%;
-    color:rgba(68, 150, 109, 0.185);
+    position: relative;
+    top:-30px;
+    left: 20px;
+    
+}
+.divyew {
+    background-color: gold;
 }

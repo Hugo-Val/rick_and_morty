@@ -8,50 +8,57 @@ function Card(props) {
    const [isFav, setIsFav] = useState(false);
 
    useEffect(() => {
-      props.myFavorites.forEach((fav) => {
-         if (fav.id === props.id) {
+      props.myFavorites.forEach((id) => {
+         if (id === props.detailId) {
             setIsFav(true);
          }
       });
    }, [props.myFavorites]);
 
-   function handleFavorite() {
+   function handleFavorite(e) {
       if (isFav) {
          setIsFav(false);
-         props.removeFavorites(props.id);
+         props.removeFavorites(e);
       } else {
          setIsFav(true);
-         props.addFavorites(props)
+         props.addFavorites(e)
       }
+      // console.log(isFav);
+      
    }
-
+   
    return (
       <div className={styles.divCard}>
-         <div>
-            <div>
+         
+            <div >
+               <div className={styles.divbuttons}>
+                  {
+                     (isFav) ? (
+                        <button 
+                           onClick={() => handleFavorite(props.detailId)}
+                           className={styles.buttonFav}
+                        >❤️</button>
+                     ) : (
+                        <button 
+                           onClick={() => handleFavorite(props)}
+                           className={styles.buttonFav}
+                        >🤍</button>
+                     )
+                  }
+                  <button onClick={() => props.onClose(props.id)} className={styles.button}>X</button>
+               <Link to = {`/detail/${props.detailId}`}  >
+                  <h2 className={styles.h2name}>{props.name}</h2>
+               </Link>
+               </div>
+            </div>
+            <div >
                <img  src={props.image} alt={props.name} className={styles.img}/>
             </div>
-            <div>
-               <h2 className={styles.h2name}>{props.name}</h2>
+            <div className={styles.divH2}>
                <h2 className={styles.h2species}>{props.species}</h2>
                <h2 className={styles.h2gender}>{props.gender}</h2>
             </div>
-            <div>
-               <div>
-                  <button onClick={() => props.onClose(props.id)} className={styles.button}>Delete</button>
-               </div>
-               <Link to = {`/detail/${props.detailId}`} >
-                  <button>View more</button>
-               </Link>
-            </div>
-            {
-               isFav ? (
-                  <button onClick={handleFavorite}>❤️</button>
-               ) : (
-                  <button onClick={handleFavorite}>🤍</button>
-               )
-            }
-         </div>  
+           
       </div>
    );
 }
@@ -64,8 +71,8 @@ export function mapStateToProps(state){
 
 export function mapDispatchToProps(dispatch) {
    return {
-      addFavorites : function (character) {
-         dispatch(addFavorites(character))
+      addFavorites : function (id) {
+         dispatch(addFavorites(id))
       },
       removeFavorites : function (id) {
          dispatch(removeFavorites(id))

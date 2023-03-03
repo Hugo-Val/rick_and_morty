@@ -1,5 +1,6 @@
 import React from "react";
 import { validation } from "./validation";
+import styles from "./Form.module.css";
 
 export default function Form(props) {
     const [userData, setUserData] = React.useState({
@@ -30,10 +31,11 @@ export default function Form(props) {
 
     return (
         <>
-            <form onSubmit={handleSubmit} >
-                <div>
-                    <label>Username:</label>
+            <form onSubmit={handleSubmit} className={styles.divUsername} >
+                <div >
+                    <label >Username : </label>
                     <input 
+                    className={styles.input}
                     name="username"
                     type="text"
                     value={userData.username}
@@ -42,8 +44,9 @@ export default function Form(props) {
                      <p>{errors.username}</p>
                 </div>
                 <div>
-                    <label>Password:</label>
+                    <label>Password : </label>
                     <input 
+                    className={styles.input}
                     name="password"
                     type="password"
                     value={userData.password}
@@ -51,7 +54,8 @@ export default function Form(props) {
                      />
                      <p>{errors.password}</p>
                 </div>
-                <button>Login</button>
+                <br />
+                <button className={styles.button}>Login</button>
             </form>
         </>
     )

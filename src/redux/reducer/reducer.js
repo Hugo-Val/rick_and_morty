@@ -11,24 +11,31 @@ export default function reducer(state = initialState, {type, payload}) {
             return {
                 ...state,
                 myFavorites : [...state.allCharacters, payload],
-                allCharacters : [...state.allCharacters, payload]
+                allCharacters : [...state.allCharacters,payload]
             }
         case REMOVE_FAV :
+            const filter = state.myFavorites.filter((id) => {
+                return id !== payload
+            })
             return {
                 ...state,
-                myFavorites : state.myFavorites.filter((element) => element.id !== payload)
+                myFavorites : filter
             }
         case FILTER :
             const filtered = state.allCharacters.filter((e) => {
-                return e.gender !== payload
+                return e.gender === payload
             })
             return{
                 ...state,
-                allCharacters : filtered
+                myFavorites : filtered
             }
         case ORDER :
             return {
-                
+                ...state,
+                myFavorites :
+                    payload === "Ascendente"
+                    ?  state.allCharacters.sort((a,b) => a.id - b.id)
+                    : state.allCharacters.sort((a,b) => b.id - a.id)
             }        
         default:
             return {

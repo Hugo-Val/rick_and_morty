@@ -1,4 +1,4 @@
-import { type } from "@testing-library/user-event/dist/type";
+
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "../actions/actions-types";
 
 export function addFavorites(character) {
@@ -15,10 +15,10 @@ export function removeFavorites(id) {
     }
 }
 
-export function filterCards(gender) {
+export function filterCards(status) {
     return {
         type : FILTER,
-        payload : gender
+        payload : status
     }
 }
 
