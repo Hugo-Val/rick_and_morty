@@ -1,0 +1,22 @@
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    
+}
+.h1 {
+    display:block;
+    margin-left: 30px;
+    font-size:50px;
+    font-family:monospace;
+}
+.h3 {
+    margin-left: 30px;
+    margin-top: -175px;
+    font-size: 30px;
+    font-family:monospace;
+}
+.div {
+    left: 30px;
+}

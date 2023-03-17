@@ -1,0 +1,77 @@
+.divCard {
+    background-color:blueviolet;
+    padding-top: 0%;
+    
+    
+
+    
+    
+    
+    
+    
+}
+
+.img {
+    padding: 0px;
+    
+}
+.divbuttons {
+    background-color: blueviolet;
+    height: 40px;
+}
+.buttonFav {
+    position: relative;
+    top: 8px;
+    left: 6px;
+    background-color: rgb(106, 0, 255);
+    border-radius: 5px;
+}
+.button {
+    position: relative;
+    left: 235px;
+    top:8px;
+    background-color: rgb(106, 0, 255);
+    color: aliceblue;
+    border-radius: 5px;
+    
+
+    
+    
+}
+
+.button:hover{
+    padding: 0;
+}
+
+.button:active {
+    padding: 0;
+}
+
+.h2name {
+    position: relative;
+    top:250px;
+    left: 15px;
+    color: rgb(0, 0, 0);
+    background-color: beige;
+    width: fit-content;
+    
+}
+.divH2 {
+    background-color: blueviolet;
+}
+.h2species {
+    position: relative;
+    left: 150px;
+    top: 16px;
+    
+}
+
+.h2gender {
+    position: relative;
+    top:-30px;
+    left: 20px;
+    
+}
+.divyew {
+    background-color: gold;
+}

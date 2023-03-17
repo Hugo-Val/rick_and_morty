@@ -1,0 +1,46 @@
+.divNav {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aquamarine;
+    width: 98.5%;
+    height: 50px;
+    
+    
+   
+    
+
+}
+
+.divSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    
+    
+    
+     
+}
+
+.linkHome {
+    position:relative;
+    top: 15px;
+    padding-left: 15px;
+
+}
+.linkFavorites {
+    position:relative;
+    top: 15px;
+    
+    
+
+}
+.linkAbout {
+    position:relative;
+    top: 15px;
+    
+    
+    
+
+}

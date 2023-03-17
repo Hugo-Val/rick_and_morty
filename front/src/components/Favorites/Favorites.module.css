@@ -1,0 +1,17 @@
+.divCards {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    
+
+
+    
+}
+
+.img {
+    padding: 0;
+}
+.selOrder {
+    font-size: 30;
+    width: fit-content;
+}

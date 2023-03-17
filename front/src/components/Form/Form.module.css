@@ -1,0 +1,15 @@
+.divUsername {
+    text-align: center;
+    font-size:30px;
+    padding-top: 10%;
+}
+.input {
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 20%;
+}
+.button {
+    font-size: 25px;
+    width: 500px;
+    
+}

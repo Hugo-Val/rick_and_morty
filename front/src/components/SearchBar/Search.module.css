@@ -1,0 +1,22 @@
+.divSearch{
+    display: flex;
+    justify-content: end;
+    padding-right: 1%;
+
+}
+.inputsearch {
+    background-color: #d3d4c7;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+
+.buttonsearch {
+    background-color: #d3d4c7;
+    position: absolute;
+    top: 25px;
+    
+    
+
+
+}
