@@ -1,31 +1,24 @@
-// JavaScript source code
-require('dotenv').config();
+const { User } = require('../DB_connection');
 
-const DB_EMAIL = process.env.DB_EMAIL;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-
-const STATUS_OK = 200;
-const STATUS_NOT_FOUND = 404;
-const STATUS_SERVER_ERROR = 500;
-
-function login(req, res) {
-    const { email, password } = req.query;
+const login = async (req, res) => {
+const { email, password } = req.query;
     try {
-        if (!email || !password) {
-            return res
-                .status(STATUS_NOT_FOUND)
-                .json({ message: "There isn't a password or email" });
+        if (!email || !password ) {
+            return res.status(400).json({ error: "Email or password is empty" });
         }
-        if (email === DB_EMAIL && password === DB_PASSWORD) {
-            res.status(STATUS_OK).json({ access: true });
-        } else {
-            res.status(STATUS_OK).json({ access: false });
+        const user = await User.findOne({
+            where: {
+                email,
+                password,
+            },
+        });
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
         }
-    } catch (err) {
-        res.status(STATUS_SERVER_ERROR).json({ message: err.message });
+        res.status(200).json({ access : true });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
     }
 }
 
-module.exports = {
-    login
-};
+module.exports = login;

@@ -1,11 +1,13 @@
 // JavaScript source code
 const express = require('express');
 const router = express.Router();
+const  login  = require('../controllers/login');
+const  postUser  = require('../controllers/postUser');
 
-const { getCharById, getAllChar } = require('../controllers/characters');
+router.get('/login', login);
+router.post('/login', postUser);
 
-router.get('/all', getAllChar);
-router.get('/:id', getCharById);
-router.get("/detail/:id", getCharById);
+
+
 
 module.exports = router;
